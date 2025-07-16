@@ -8,7 +8,7 @@ const SeeAllReviews = ({setSeeReviews,reviewData}) => {
          
                                
                                 {reviewData?.map((item)=>(
-                                    <div className='border border-gray-300 rounded shadow drop-shadow-white mb-5'>
+                                    <div className='border border-gray-300 rounded shadow drop-shadow-white mb-5' key={item?.id}>
                                   <div className='flex p-3'>
                                   <div className='rounded-full h-14 w-14 flex items-center justify-center bg-gray-400'><img src={`https://image.tmdb.org/t/p/original${item?.author_details?.avatar_path}`} alt="profile" className='h-full w-full object-contain rounded-full' /></div>
                                    <div className='flex-col ml-3'> <p className='font-bold '>A review by {item?.author}</p> 

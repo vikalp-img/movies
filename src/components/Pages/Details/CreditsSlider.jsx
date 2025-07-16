@@ -27,7 +27,7 @@ function CreditsSlider({ title, credits }) {
 
       <Swiper 
         spaceBetween={12} 
-        slidesPerView={2.2}
+        slidesPerView={1.5}
         breakpoints={{
           480: {
             slidesPerView: 2.5,

@@ -47,7 +47,7 @@ function SearchBar() {
    const clickHandler = async(id,mediaType)=>{
   //  await dispatch(getMediaById({ id, mediaType })).unwrap();
       //  await dispatch(getMediaCredits({ id, mediaType })).unwrap();
-       navigate('/details');
+       navigate(`/details/${mediaType}/${id}`);
     }
 
 console.log(searchedQuery,'searachQuery');

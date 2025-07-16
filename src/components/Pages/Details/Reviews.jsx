@@ -32,7 +32,7 @@ console.log(data,'reviewData');
                             <div className='rounded h-fit w-fit bg-gray-700 text-white text-xs sm:text-sm font-semibold px-2 py-1 flex items-center justify-center gap-1'> 
                                 <FaStar className='text-xs' /> {((reviewData[0]?.author_details?.rating)/10)*100}% 
                             </div>
-                            <p className='text-xs sm:text-sm text-gray-600'>Written by {reviewData[0]?.author} on {(reviewData[0]?.created_at)}</p>{console.log(new Date(reviewData[0]?.created_at),'date')}
+                            <p className='text-xs sm:text-sm text-gray-600'>Written by {reviewData[0]?.author} on {(reviewData[0]?.created_at)}</p>
                            </div>
                         </div>
                     </div>
