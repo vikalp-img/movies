@@ -71,15 +71,15 @@ const LatestTrailers = () => {
           <div className="flex flex-wrap justify-center sm:justify-end gap-2">
             {tabs.map((tab) => (
               <button
-                key={tab.value}
-                onClick={() => setSelectedTab(tab.value)}
+                key={tab?.value}
+                onClick={() => setSelectedTab(tab?.value)}
                 className={`px-3 sm:px-4 py-1 rounded-full text-xs sm:text-sm font-medium transition-all duration-200 ${
-                  selectedTab === tab.value
+                  selectedTab === tab?.value
                     ? 'bg-blue-600 text-white shadow-md'
                     : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
                 }`}
               >
-                {tab.label}
+                {tab?.label}
               </button>
             ))}
           </div>
@@ -88,23 +88,23 @@ const LatestTrailers = () => {
         <div className="flex overflow-x-auto space-x-4 py-2">
           {trailers.map((item) => (
             <a
-              key={item.id}
-              href={`https://www.youtube.com/watch?v=${item.trailer.key}`}
+              key={item?.id}
+              href={`https://www.youtube.com/watch?v=${item?.trailer.key}`}
               target="_blank"
               rel="noopener noreferrer"
               className="flex-shrink-0 w-48 sm:w-56 md:w-64 transform transition-transform duration-200 hover:scale-105"
               onMouseEnter={() =>
-                setBackground(`https://image.tmdb.org/t/p/original${item.backdrop_path}`)
+                setBackground(`https://image.tmdb.org/t/p/original${item?.backdrop_path}`)
               }
             >
               <div className="relative rounded-lg overflow-hidden shadow-lg">
                 <img
-                  src={`https://img.youtube.com/vi/${item.trailer.key}/hqdefault.jpg`}
-                  alt={item.trailer.name}
+                  src={`https://img.youtube.com/vi/${item?.trailer.key}/hqdefault.jpg`}
+                  alt={item?.trailer.name}
                   className="w-full h-28 sm:h-32 md:h-36 object-cover"
                 />
                 <div className="absolute bottom-0 left-0 right-0 bg-black bg-opacity-60 text-white text-xs sm:text-sm p-1 truncate">
-                  {item.title || item.name}
+                  {item?.title || item?.name}
                 </div>
               </div>
             </a>
