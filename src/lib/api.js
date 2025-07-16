@@ -60,4 +60,10 @@ export const getReviewApi= async (id,mediaType) => {
 
   const res = await axiosInstance.get(`/${base}/reviews?language=en-US`);
   return res.data.results
+};
+
+export const getLederBoardData = async()=>{
+
+  const res = await axiosInstance.get('/person/popular?language=en-US&page=1');
+  return res.data.results;
 }

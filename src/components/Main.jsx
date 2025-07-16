@@ -72,7 +72,7 @@ function Main() {
     </div>
 
     <CommonComponent title={'Trending'} data={allMovies} tabs={tabOptions} useTabs={true} />
-    {/* <LatestTraillers /> */}
+    <LatestTraillers title={'Latest Traillers'} tabs={[{label:'Movie',value:'movie'},{label:'tv',value:'tv'},{label:'popular',value:'popular'}]} />
     <CommonComponent title={'Tv Shows'} data={tvShows} tabs={[{label:'Latest',value:'latest'},{label:'Popular',value:'popular'}]} useTabs={true} />
     <LeaderBoard />
     <Footer />

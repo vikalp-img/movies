@@ -82,12 +82,12 @@ const hasImdb = dataArray.some(item => item.imdb_id);
         spaceBetween: 30,
       }
     }}
-    className='bg-gradient-to-t from-cyan-400 to-blue-800 !pb-2'
+    className='bg-gradient-to-t from-cyan-400 to-blue-800 !pb-2  '
   >
     {(filteredData || []).map((item) => (
-      <SwiperSlide key={item.id} className='!h-auto'>
+      <SwiperSlide key={item.id} className='!h-auto '>
         {console.log(item.cast,'item')}
-        <div className='transform transition-transform duration-200 '>
+        <div className='transform transition-transform duration-200  '>
           <Card item={item} />
         </div>
       </SwiperSlide>

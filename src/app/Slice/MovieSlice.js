@@ -48,6 +48,7 @@ const initialState = {
   movieBannerDetails:[],
   movieCredits: [],
   reviews: [],
+  leaderboardData:[],
   mediaInfo: null,
   searchQuery: '',
   loading: false,
@@ -70,6 +71,8 @@ const MovieSlice = createSlice({
      setMovieBannerDetails: (state, action) => { state.movieBannerDetails = {...state.movieBannerDetails,...action.payload}},
   setMovieCredits: (state, action) => { state.movieCredits ={...state.movieCredits,...action.payload} },
   setReviews: (state, action) => { state.reviews = {...state.reviews,...action.payload} },
+  setLeadeboardData:(state,action)=>{state.leaderboardData = action.payload},
+
   },
   extraReducers: (builder) => {
     builder
@@ -153,5 +156,5 @@ const MovieSlice = createSlice({
   },
 });
 
-export const { setSearchQuery, clearSearchResults, setMediaInfo,setMovieBannerDetails, setMovieCredits, setReviews  } = MovieSlice.actions;
+export const { setSearchQuery, clearSearchResults, setMediaInfo,setMovieBannerDetails, setMovieCredits, setReviews,setLeadeboardData  } = MovieSlice.actions;
 export default MovieSlice.reducer;

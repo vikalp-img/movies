@@ -16,10 +16,10 @@ const Footer = () => {
                     <div className='text-center lg:text-left'>
                         <p className='text-white font-medium text-lg sm:text-xl mb-3 sm:mb-4'>The Basics</p>
                         <div className='space-y-2 sm:space-y-3'>
-                            <p className='text-white text-sm sm:text-base hover:text-gray-300 cursor-pointer transition-colors duration-200'>About Us</p>
-                            <p className='text-white text-sm sm:text-base hover:text-gray-300 cursor-pointer transition-colors duration-200'>Contact Us</p>
-                            <p className='text-white text-sm sm:text-base hover:text-gray-300 cursor-pointer transition-colors duration-200'>Show Support</p>
-                            <p className='text-white text-sm sm:text-base hover:text-gray-300 cursor-pointer transition-colors duration-200'>Status</p>
+                            <p className='text-white text-sm sm:text-base hover:text-blue-400 cursor-pointer transition duration-300 ease-in-out  hover:translate-x-2'>About Us</p>
+                            <p className='text-white text-sm sm:text-base hover:text-blue-400 cursor-pointer transition duration-300 ease-in-out  hover:translate-x-2'>Contact Us</p>
+                            <p className='text-white text-sm sm:text-base hover:text-blue-400 cursor-pointer transition duration-300 ease-in-out  hover:translate-x-2'>Show Support</p>
+                            <p className='text-white text-sm sm:text-base hover:text-blue-400 cursor-pointer transition duration-300 ease-in-out  hover:translate-x-2'>Status</p>
                         </div>
                     </div>
                 </div>
@@ -27,9 +27,9 @@ const Footer = () => {
                     <div className='text-center lg:text-left'>
                         <p className='text-white font-medium text-lg sm:text-xl mb-3 sm:mb-4'>Contribution</p>
                         <div className='space-y-2 sm:space-y-3'>
-                            <p className='text-white text-sm sm:text-base hover:text-gray-300 cursor-pointer transition-colors duration-200'>Collaborate</p>
-                            <p className='text-white text-sm sm:text-base hover:text-gray-300 cursor-pointer transition-colors duration-200'>Add Movies</p>
-                            <p className='text-white text-sm sm:text-base hover:text-gray-300 cursor-pointer transition-colors duration-200'>Add Tv Shows</p>
+                            <p className='text-white text-sm sm:text-base hover:text-blue-400 cursor-pointer transition duration-300 ease-in-out  hover:translate-x-2'>Collaborate</p>
+                            <p className='text-white text-sm sm:text-base hover:text-blue-400 cursor-pointer transition duration-300 ease-in-out  hover:translate-x-2'>Add Movies</p>
+                            <p className='text-white text-sm sm:text-base hover:text-blue-400 cursor-pointer transition duration-300 ease-in-out  hover:translate-x-2'>Add Tv Shows</p>
                         </div>
                     </div>
                 </div>
@@ -37,9 +37,9 @@ const Footer = () => {
                     <div className='text-center lg:text-left'>
                         <p className='text-white font-medium text-lg sm:text-xl mb-3 sm:mb-4'>Legal</p>
                         <div className='space-y-2 sm:space-y-3'>
-                            <p className='text-white text-sm sm:text-base hover:text-gray-300 cursor-pointer transition-colors duration-200'>Rights & Reserves</p>
-                            <p className='text-white text-sm sm:text-base hover:text-gray-300 cursor-pointer transition-colors duration-200'>Usage</p>
-                            <p className='text-white text-sm sm:text-base hover:text-gray-300 cursor-pointer transition-colors duration-200'>Terms & Conditions</p>
+                            <p className='text-white text-sm sm:text-base hover:text-blue-400 cursor-pointer transition duration-300 ease-in-out  hover:translate-x-2 '>Rights & Reserves</p>
+                            <p className='text-white text-sm sm:text-base hover:text-blue-400 cursor-pointer transition duration-300 ease-in-out hover:translate-x-2'>Usage</p>
+                            <p className='text-white text-sm sm:text-base hover:text-blue-400 cursor-pointer transition duration-300 ease-in-out hover:translate-x-2'>Terms & Conditions</p>
                         </div>
                     </div>
                 </div>

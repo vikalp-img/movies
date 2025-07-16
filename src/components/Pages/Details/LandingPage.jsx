@@ -36,25 +36,29 @@ const bannerDetailsInLocalStorage = JSON.parse(bannerDetailsInLocal) || {};
 console.log(CreditsdataInLocalStorage[cre],'Cccccccccccccccccc');
 
 
- const fetchData= async()=>{
-  if(bannerDetails[cre] || bannerDetailsInLocalStorage[cre]) return;
+const fetchData = async () => {
+  try {
+    const stored = JSON.parse(localStorage.getItem('bannerDetails')) || {};
+    const cached = stored[cre];
+    const now = Date.now();
 
-  const now = Date.now()
-    const cached = bannerDetailsInLocalStorage[cre];
+    if (bannerDetails[cre]) return;
 
-    if(cached && now- cached?.timestamp <1800000){
-      dispatch(setMovieBannerDetails({[cre]:cached.data}));
+    if (cached && now - cached.timestamp < 1800000) {
+      
+      dispatch(setMovieBannerDetails({ [cre]: cached.data }));
       return;
     }
-  const data = await getMediaBannerDetails(id,mediaType);
- 
-   dispatch(setMovieBannerDetails({[cre]:data}));
-   const previousStored = JSON.parse(bannerDetailsInLocal) ;
-const dataToAdd = {...previousStored,[cre]:{data: data,timestamp: Date.now()}};
-localStorage.setItem('bannerDetails',JSON.stringify(dataToAdd));
 
-    console.log(data,'dataaaa')
-}
+    const apiData = await getMediaBannerDetails(id, mediaType);
+    dispatch(setMovieBannerDetails({ [cre]: apiData }));
+
+    const newStored = { ...stored, [cre]: { data: apiData, timestamp: now } };
+    localStorage.setItem('bannerDetails', JSON.stringify(newStored));
+
+  } catch (error) {}
+};
+
 
 
 // const fetchCredits =async()=>{
@@ -98,9 +102,7 @@ const fetchCredits = async () => {
     const newData = {...storedData, [cre]: { data: apiData, timestamp: Date.now() }};
     localStorage.setItem('creditsDetails', JSON.stringify(newData));
 
-  } catch (error) {
-    
-  }
+  } catch (error) {}
 };
 
 
